@@ -2,7 +2,7 @@
 name = "leptos-fluent"
 description = "Fluent framework for internationalization of Leptos applications"
 edition.workspace = true
-version = "0.2.6"
+version = "0.2.10"
 rust-version = "1.80.1"
 license = "MIT"
 documentation.workspace = true
@@ -17,8 +17,10 @@ fluent-templates = { version = ">=0.13", default-features = false, features = [
   "macros",
   "walkdir",
 ] }
-leptos = "0.8.0-alpha"
-leptos_meta = "0.8.0-alpha"
+leptos = { git = "https://github.com/leptos-rs/leptos", branch = "main", features = [
+  "nightly",
+] }
+leptos_meta = { git = "https://github.com/leptos-rs/leptos", branch = "main" }
 web-sys = { version = ">=0.1", features = [
   "HtmlDocument",
   "Navigator",
@@ -50,15 +52,41 @@ debug = ["leptos-fluent-macros/debug"]
 
 [package.metadata.cargo-all-features]
 skip_feature_sets = [
-  ["csr", "ssr"],
-  ["csr", "hydrate"],
-  ["ssr", "hydrate"],
-  ["actix", "axum"],
-  ["actix", "csr"],
-  ["actix", "hydrate"],
-  ["axum", "csr"],
-  ["axum", "hydrate"],
-  ["ssr"],
+  [
+    "csr",
+    "ssr",
+  ],
+  [
+    "csr",
+    "hydrate",
+  ],
+  [
+    "ssr",
+    "hydrate",
+  ],
+  [
+    "actix",
+    "axum",
+  ],
+  [
+    "actix",
+    "csr",
+  ],
+  [
+    "actix",
+    "hydrate",
+  ],
+  [
+    "axum",
+    "csr",
+  ],
+  [
+    "axum",
+    "hydrate",
+  ],
+  [
+    "ssr",
+  ],
 ]
 always_include_features = ["json"]
 denylist = ["yaml", "json5", "nightly", "tracing"]

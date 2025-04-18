@@ -17,10 +17,10 @@ fluent-templates = { version = ">=0.13", default-features = false, features = [
   "macros",
   "walkdir",
 ] }
-leptos = { git = "https://github.com/leptos-rs/leptos", branch = "main", features = [
+leptos = { git = "https://github.com/leptos-rs/leptos", rev = "410aedbba82ecaeb68f673b58fb3f28b5a58e789", features = [
   "nightly",
 ] }
-leptos_meta = { git = "https://github.com/leptos-rs/leptos", branch = "main" }
+leptos_meta = { git = "https://github.com/leptos-rs/leptos", rev = "410aedbba82ecaeb68f673b58fb3f28b5a58e789" }
 web-sys = { version = ">=0.1", features = [
   "HtmlDocument",
   "Navigator",

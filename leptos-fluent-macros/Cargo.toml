@@ -41,7 +41,7 @@ tracing = { version = "0.1", optional = true }
 
 [dev-dependencies]
 trybuild = "1"
-leptos = { git = "https://github.com/leptos-rs/leptos", branch = "main", features = [
+leptos = { git = "https://github.com/leptos-rs/leptos", rev = "410aedbba82ecaeb68f673b58fb3f28b5a58e789", features = [
   "nightly",
 ] }
 leptos-fluent = { path = "../leptos-fluent" }

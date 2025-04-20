@@ -17,8 +17,8 @@ fluent-templates = { version = ">=0.13", default-features = false, features = [
   "macros",
   "walkdir",
 ] }
-leptos = ">=0.7,<0.9"
-leptos_meta = ">=0.7,<0.9"
+leptos = "0.8.0-rc2"
+leptos_meta = "0.8.0-rc2"
 web-sys = { version = ">=0.1", features = [
   "HtmlDocument",
   "Navigator",
@@ -50,15 +50,41 @@ debug = ["leptos-fluent-macros/debug"]
 
 [package.metadata.cargo-all-features]
 skip_feature_sets = [
-  ["csr", "ssr"],
-  ["csr", "hydrate"],
-  ["ssr", "hydrate"],
-  ["actix", "axum"],
-  ["actix", "csr"],
-  ["actix", "hydrate"],
-  ["axum", "csr"],
-  ["axum", "hydrate"],
-  ["ssr"],
+  [
+    "csr",
+    "ssr",
+  ],
+  [
+    "csr",
+    "hydrate",
+  ],
+  [
+    "ssr",
+    "hydrate",
+  ],
+  [
+    "actix",
+    "axum",
+  ],
+  [
+    "actix",
+    "csr",
+  ],
+  [
+    "actix",
+    "hydrate",
+  ],
+  [
+    "axum",
+    "csr",
+  ],
+  [
+    "axum",
+    "hydrate",
+  ],
+  [
+    "ssr",
+  ],
 ]
 always_include_features = ["json"]
 denylist = ["yaml", "json5", "nightly", "tracing"]
